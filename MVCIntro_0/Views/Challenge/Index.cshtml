@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="jumbotron">
+    <h3>
+        Carpım Tablosu
+    </h3>
+
+</div>
+
+
+@for (int i = 1; i < 11; i++)
+{
+    for(int j = 1; j < 11; j++)
+    {
+        string sonuc = $"{i} x {j} = {i*j}";
+        <p> @sonuc</p>
+    }
+
+    <hr />
+}
+
+
+
+

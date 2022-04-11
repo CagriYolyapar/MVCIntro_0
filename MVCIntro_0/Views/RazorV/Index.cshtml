@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Razor View Engine(Razor Görüntüleme Motoru)</h2>
+
+<p>
+    Razor View Engine, bizim View'larımızda (Front End'imizde) C# kodları yazmamızı saglayan bir teknolojidir...Razor View Engine bu geçişi çok rahat bir şekilde saglar...Bu geçiş sırasında herhangi bir performans kaybı yaratmaz...Razor View Engine'i @@ sembolü ile kullanabilirsiniz(tek)
+
+    Razor blogu dısında acılan Razor ifadelerinde noktalı virgül kullanılmaz...
+
+
+
+</p>
+
+<p>
+    Şu anki tarih @DateTime.Now 
+</p>
+
+<p>
+    Tek satırlık Razor ifadelerinde geçis cok kolaydır. Ancak sunu unutmamalısınız ki bosluk bıraktıgınız anda HTML'e geri dönersiniz.. O yüzden tek satırlık Razor ifadelerini bozmamaya özen gösterin...Eger birden fazla satır yazacaksanız veya icerisinde bosluk barındıran bir C# ifadesini yazmak istiyorsanız normal Razor Syntax'inden ziyade Razor Blog'u kullanmalısınız. Razor blog'u icerisine yazılan ifadelerde noktalı virgül koymak zorunludur...
+
+    Dilediginiz her yere Razor ifadesi yazabilirsiniz...@@() bu tarz parantezler ile Razor ifadesi kullanmak yine tek satırlıktır ancak belirli boslukların kısmi derecede bırakılmasına müsaade eder...
+</p> 
+
+@{ 
+    int sayi = 1987;
+    string ad = "Cagri", soyad = "Yolyapar";
+    int yas = 34;
+}
+
+<p>
+    Ad soyad => @ad @soyad Yas => @yas, Yil => @sayi
+</p>
+
+@(sayi + sayi ) => cıktı: 1987 ile 1987'nin toplamıdır...
+
+@{ 
+    int sonuc = sayi + sayi;
+    <p>BUrası HTml'dir... ANcak bir Razor Blogunda taglerden cıktıgınız anda C#'a geri dönersiniz</p>
+    
+}
+
+
+<ul>
+    <li>@ad</li>
+    <li>@soyad</li>
+    <li>@yas</li>
+</ul>
+
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Isim</th>
+            <th>SoyIsim</th>
+            <th>Yas</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>@ad</td>
+            <td>@soyad</td>
+            <td>@yas</td>
+        </tr>
+    </tbody>
+</table>
+
+ 
